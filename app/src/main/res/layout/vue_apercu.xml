@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+<!-- Bounton Retour -->
+<Button android:id="@+id/btR"
+    android:text="Retour"
+    android:background="@drawable/bouton_apercu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onClick"
+    android:layout_gravity="left"
+    android:textAlignment="center" />
+
+<!-- Nom abonné -->
+<TextView android:id="@+id/tvFluxJson"
+    android:text="Nom abonné : "
+    android:textColor="#000000"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tvS1"
+    android:layout_gravity="center_horizontal"
+    android:padding="4dp" />
+<TextView android:id="@+id/tvJSON"
+    android:textColor="#ff8200"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tvFluxJson"
+    android:layout_gravity="center_horizontal"
+    android:textStyle="bold" />
+
+<!-- Saut de ligne -->
+<TextView android:id="@+id/tvS2" android:text="" android:layout_width="wrap_content"
+    android:layout_height="wrap_content" android:layout_below="@+id/tvJson" />
+
+<!-- Barre de défilement -->
+<ScrollView android:scrollbars="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<!-- Début table -->
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:stretchColumns="*" >
+
+<!-- Compteurs -->
+<TableRow android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:background="@drawable/tableau1">
+        <TextView android:text="Compteurs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textAlignment="gravity"
+            android:layout_gravity="center" />
+        <TextView android:text="N°1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_column="1" />
+        <TextView android:text="N°2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_column="2" />
+        <TextView android:text="N°3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_column="3" />
+</TableRow>
+
+<!-- Date -->
+<TableRow android:layout_height="wrap_content"
+    android:layout_width="fill_parent">
+        <TextView android:text="Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:background="@drawable/tableau2"
+            android:layout_margin="3dp"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:layout_column="0"
+            android:gravity="left" />
+        <TextView android:id="@+id/tvDate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:layout_column="1"
+            android:gravity="center"
+            android:textAlignment="center" />
+        <TextView android:id="@+id/tvDate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:background="@drawable/tableau3"
+            android:layout_column="2"
+            android:textAlignment="center"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvDate3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:layout_column="3"
+            android:gravity="center"
+            android:textAlignment="center" />
+</TableRow>
+
+
+<!-- Tension -->
+<TableRow android:layout_height="wrap_content"
+    android:layout_width="fill_parent">
+        <TextView android:text="Tension"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:background="@drawable/tableau2"
+            android:layout_margin="3dp"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:layout_column="0" />
+        <TextView android:id="@+id/tvTension1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:layout_column="1"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvTension2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="2"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvTension3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:layout_column="3"
+            android:gravity="center" />
+</TableRow>
+
+
+<!-- Courant -->
+<TableRow android:layout_height="wrap_content"
+    android:layout_width="fill_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Courant"
+            android:textColor="#000000"
+            android:background="@drawable/tableau2"
+            android:layout_margin="3dp"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:layout_column="0" />
+        <TextView android:id="@+id/tvCourant1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="8dp"
+            android:background="@drawable/tableau3"
+            android:textColor="#000000"
+            android:layout_column="1"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvCourant2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textColor="#000000"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:layout_column="2"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvCourant3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="8dp"
+            android:background="@drawable/tableau3"
+            android:textColor="#000000"
+            android:layout_column="3"
+            android:gravity="center" />
+</TableRow>
+
+
+
+<!-- Puissance active -->
+<TableRow android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+        <TextView android:text="Puissance active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:background="@drawable/tableau2"
+            android:layout_margin="3dp"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:layout_column="0" />
+        <TextView android:id="@+id/tvP_active1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="1"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvP_active2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="2"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvP_active3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="3"
+            android:gravity="center" />
+</TableRow>
+
+
+<!-- Puissance apparente -->
+<TableRow android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+        <TextView android:text="Puissance apparente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:background="@drawable/tableau2"
+            android:layout_margin="3dp"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:layout_column="0" />
+        <TextView android:id="@+id/tvP_apparente1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:layout_column="1"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvP_apparente2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="2"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvP_apparente3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:layout_column="3"
+            android:gravity="center" />
+</TableRow>
+
+<!--Puissance reactive -->
+<TableRow android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+        <TextView android:text="Puissance reactive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:background="@drawable/tableau2"
+            android:layout_margin="3dp"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:layout_column="0" />
+        <TextView android:id="@+id/tvP_reactive1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="1"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvP_reactive2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="2"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvP_reactive3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="3"
+            android:gravity="center" />
+</TableRow>
+
+<!-- Facteur de puissance-->
+<TableRow android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+        <TextView android:text="Facteur de puissance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:background="@drawable/tableau2"
+            android:layout_margin="3dp"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:layout_column="0" />
+        <TextView android:id="@+id/tvF_puissance1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="1"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvF_puissance2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="2"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvF_puissance3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="3"
+            android:gravity="center" />
+</TableRow>
+
+<!-- Energie totale -->
+<TableRow android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+        <TextView android:text="Energie totale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:background="@drawable/tableau2"
+            android:layout_margin="3dp"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:layout_column="0" />
+        <TextView android:id="@+id/tvE_totale1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="1"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvE_totale2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="2"
+            android:gravity="center" />
+        <TextView android:id="@+id/tvE_totale3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tableau3"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_column="3"
+            android:gravity="center" />
+</TableRow>
+
+</TableLayout>
+</ScrollView>
+</LinearLayout>
